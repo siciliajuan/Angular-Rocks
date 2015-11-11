@@ -37,41 +37,42 @@
 
 	var app = angular.module('greatestMusicians',['ngRoute']);
 
-	app.controller('HeadCtrl',function($scope, Head){
+	app.controller('HeadCtrl',function($location, $scope, Head){
 		$scope.Head = Head;
 	});
-
-	function HomeHeadCtrl($scope, Head){
-		updatePageData(Head,pagesContent[0]);
+	//$location.absUrl()
+	function HomeHeadCtrl($location, $scope, Head){
+		updatePageData($location, Head,pagesContent[0]);
 	};
 
-	function FooHeadCtrl ($scope, Head){
-		updatePageData(Head,pagesContent[0]);
+	function FooHeadCtrl ($location, $scope, Head){
+		updatePageData($location, Head,pagesContent[0]);
 	};
 
-	function BarHeadCtrl ($scope, Head){
-		updatePageData(Head,pagesContent[0]);
+	function BarHeadCtrl ($location, $scope, Head){
+		updatePageData($location, Head,pagesContent[0]);
 	};
 
-	function TherollingstoneHeadCtrl ($scope, Head){
-		updatePageData(Head,pagesContent[1]);
+	function TherollingstoneHeadCtrl ($location, $scope, Head){
+		updatePageData($location, Head,pagesContent[1]);
 	};
 
-	function ThebeatlesHeadCtrl ($scope, Head){
-		updatePageData(Head,pagesContent[2]);
+	function ThebeatlesHeadCtrl ($location, $scope, Head){
+		updatePageData($location, Head,pagesContent[2]);
 	};
 
-	function QueenHeadCtrl ($scope, Head){
-		updatePageData(Head,pagesContent[3]);
+	function QueenHeadCtrl ($location, $scope, Head){
+		updatePageData($location, Head,pagesContent[3]);
 	};
 
-	function updatePageData(Head,pageContent){
+	function updatePageData($location, Head,pageContent){
 		Head.setTitle(pageContent.title);
 		Head.setDescription(pageContent.description);
 		Head.setKeywords(pageContent.keywords);
 		Head.setInfo(pageContent.info);
 		Head.setimage(pageContent.image);
 		Head.setVideo(pageContent.video);
+		Head.setUrl($location.absUrl());
 	};
 
 	app.factory('Head', function(){
@@ -81,6 +82,7 @@
 	  var info = '';
 	  var image = '';
 	  var video = '';
+	  var url ='';
 	  return {
 	    title: function() { return title; },
 	    description: function() { return description; },
@@ -88,12 +90,14 @@
 	    info: function() { return info; },
 	    image: function() { return image; },
 	    video: function() { return video; },
+	    url: function() { return url; },
 	    setTitle: function(newTitle) { title = newTitle; },
 	    setDescription: function(newDescription) { description = newDescription; },
 	    setKeywords: function(newKeywords) { keywords = newKeywords; },
 	    setInfo: function(newInfo) { info = newInfo; },
 	    setimage: function(newimage) { image = newimage; },
-	    setVideo: function(newVideo) { video = newVideo; }
+	    setVideo: function(newVideo) { video = newVideo; },
+	    setUrl: function(newUrl) { url = newUrl; }
 	  };
 	});
 

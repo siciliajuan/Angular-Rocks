@@ -6,11 +6,11 @@
         <meta name="keywords" content="{{ Head.keywords() }}"/>
         <!-- Open Graph -->
         <meta property="og:title" content="{{ Head.title() }}" />
-        <meta property="og:description" content=""/>
+        <meta property="og:description" content="{{ Head.description() }}"/>
 		<meta property="og:type" content="article" />
-		<meta property="og:url" content="" />
-		<meta property="og:image" content="" />
-		<meta property="og:video" content=""/>
+		<meta property="og:url" content="{{ Head.url() }}" />
+		<meta property="og:image" content="{{ Head.image() }}" />
+		<meta property="og:video" content="{{ Head.video() }}"/>
         <title>{{ Head.title() }}</title>
     </head>
     <body>
