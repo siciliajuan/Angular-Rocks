@@ -1,10 +1,15 @@
-<!DOCTYPE HTML">
-<html lang="ES">
+<!DOCTYPE html>
+<html lang="ES" ng-app="greatestMusicians" ng-controller="HeadCtrl">
     <head>
-        <meta charset="UTF-8" />
-        <title>Untitled Document</title>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="{{ Head.description() }}"/>
+        <meta name="keywords" content="{{ Head.keywords() }}"/>
+        <title>{{ Head.title() }}</title>
     </head>
-    
     <body>
+    	<section ng-view></section>
+    	<script type="text/javascript" src="./js/vendor/angular.js"></script>
+    	<script type="text/javascript" src="./js/vendor/angular-route.js"></script>
+    	<script type="text/javascript" src="./js/main.js"></script>
     </body>
 </html>
