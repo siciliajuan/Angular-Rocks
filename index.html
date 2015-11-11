@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html lang="ES" ng-app="greatestMusicians" ng-controller="HeadCtrl">
+<html lang="ES" prefix="og: http://ogp.me/ns#" ng-app="greatestMusicians" ng-controller="HeadCtrl">
     <head>
         <meta charset="UTF-8"/>
         <meta name="description" content="{{ Head.description() }}"/>
         <meta name="keywords" content="{{ Head.keywords() }}"/>
+        <!-- Open Graph -->
+        <meta property="og:title" content="{{ Head.title() }}" />
+        <meta property="og:description" content=""/>
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:video" content=""/>
         <title>{{ Head.title() }}</title>
     </head>
     <body>
