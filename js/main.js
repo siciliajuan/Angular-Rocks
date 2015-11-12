@@ -1,5 +1,14 @@
 (function(){
 
+	/* 
+	My inicial intencion was modularize all this .js among some files 
+	sorted in controllers, services, directives folders and routes.js file, but for 
+	some reason after near two hour I can make it work, so decided coninuing this
+	way till make all work and then refactor this .js file.
+	*/
+
+	//Data
+
 	var pagesContent = [
 		{
 			title: 'Angular Rocks',
@@ -35,12 +44,15 @@
 		}
 	];
 
-	var app = angular.module('greatestMusicians',['ngRoute']);
+	/* 
+	AngulasJS Module
+	*/
+	var app = angular.module('greatestMusiciansModule',['ngRoute']);
 
 	app.controller('HeadCtrl',function($location, $scope, Head){
 		$scope.Head = Head;
 	});
-	//$location.absUrl()
+
 	function HomeHeadCtrl($location, $scope, Head){
 		updatePageData($location, Head,pagesContent[0]);
 	};
@@ -74,6 +86,7 @@
 		Head.setVideo(pageContent.video);
 		Head.setUrl($location.absUrl());
 	};
+
 
 	app.factory('Head', function(){
 	  var title = 'Angular Rocks';
