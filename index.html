@@ -11,16 +11,13 @@
 		<meta property="og:url" content="{{ Head.url() }}" />
 		<meta property="og:image" content="{{ Head.image() }}" />
 		<meta property="og:video" content="{{ Head.video() }}"/>
-		<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
         <title>{{ Head.title() }}</title>
     </head>
-    <body class="container">
-    	<header class="text-center col-xs-col-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2"><a ng-href="#/home"><h1>{{ Head.title() }}</h1></a></header>
-    	<section class="row" ng-view></section>
-    	<footer class="text-center col-xs-col-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2"><a href="https://twitter.com/juan_sicilia">@Juan_Sicilia</a></footer>
-    	<script type="text/javascript" src="./js/vendor/jquery.js"></script>
-    	<script type="text/javascript" src="./js/vendor/bootstrap.js"></script>
+    <body>
+    	<header class="space-center"><a ng-href="#/home"><h1>{{ Head.title() }}</h1></a></header>
+    	<section class="row space-center" ng-view></section>
+    	<footer class="space-center"><a href="https://twitter.com/juan_sicilia">@Juan_Sicilia</a></footer>
     	<script type="text/javascript" src="./js/vendor/angular.js"></script>
     	<script type="text/javascript" src="./js/vendor/angular-route.js"></script>
     	<script type="text/javascript" src="./js/controllers/page-controller.js"></script>

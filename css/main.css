@@ -1,3 +1,37 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: "Ubuntu", Helvetica, Arial, sans-serif!important;
+}
+body{
+	background-image: url('http://www.designbolts.com/wp-content/uploads/2012/12/Stitched-Wool-White-Seamless-Textures-For-Website-Background.jpg');
+}
+a:link, a:visited{
+	text-decoration: inherit;
+	color: #006dcc;
+}
+footer{
+	font-weight: bold;
+	margin: 0px auto 0px auto;
+	padding-top: 3%;
+	padding-bottom: 2%;
+	width: 40%;
+}
+header{
+	margin: 0px auto 0px auto;
+	width: 40%;
+}
+
 header a:link, footer a:link{
     text-decoration: inherit;
     color: inherit;
@@ -7,9 +41,15 @@ header a:visited, footer  a:visited{
     text-decoration: inherit;
     color: inherit;
 }
-body{
-	background-image: url('http://www.designbolts.com/wp-content/uploads/2012/12/Stitched-Wool-White-Seamless-Textures-For-Website-Background.jpg');
-}
 ul{
 	list-style: none;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+.space-center{
+	margin: 0px auto 0px auto;
+	text-align: center;
+	width: 60%;
 }
