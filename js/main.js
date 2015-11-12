@@ -44,15 +44,6 @@
 		}
 	];
 
-	/* 
-	AngulasJS Module
-	*/
-	var app = angular.module('greatestMusiciansModule',['ngRoute']);
-
-	app.controller('HeadCtrl',function($location, $scope, Head){
-		$scope.Head = Head;
-	});
-
 	function HomeHeadCtrl($location, $scope, Head){
 		updatePageData($location, Head,pagesContent[0]);
 	};
@@ -87,6 +78,15 @@
 		Head.setUrl($location.absUrl());
 	};
 
+	/* 
+	AngulasJS Module
+	*/
+
+	var app = angular.module('greatestMusiciansModule',['ngRoute']);
+
+	app.controller('HeadCtrl',function($location, $scope, Head){
+		$scope.Head = Head;
+	});
 
 	app.factory('Head', function(){
 	  var title = 'Angular Rocks';
@@ -115,7 +115,7 @@
 	});
 
 
-	app.config(['$routeProvider', '$locationProvider',function($routeProvider,$locationProvider) {
+	app.config(['$routeProvider',function($routeProvider) {
 		$routeProvider.
 			when('/',{
 				templateUrl: './templates/pages/home/index.html',
@@ -145,5 +145,7 @@
 				redirectTo: '/'
 			});
 	}]);
+
+	app.directive();
 
 })();
